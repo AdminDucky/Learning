@@ -15,7 +15,7 @@ This is archive.py, a small archive script I made. This is a remake of an old da
 - [x] fix entry_1 formatting
 - [ ] fix line 434 error "in <module> welcome()"
 - [ ] fix line 426 error "in welcome Level0 - {level0_unlock}
-
+- [ ] fix line 39 error "level0_unlock not reachable"
 ## Feedback
 Please leave feedback in my discussion page:
 - General Talk: https://github.com/AdminDucky/Learning/discussions/categories/general
