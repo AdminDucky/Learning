@@ -1,14 +1,19 @@
 # https://github.com/AdminDucky/Learning
 import time
 
+global user
 user = input("Who are you? ")
+global isloggedin
+isloggedin = False
+global level
+level = 0
+
 active = True
-level = 0 
 L1 = "GitHub"
 L2 = "Discord Robots"
 L3 = "Coding Is Hard"
 
-termination = 100 # If counter reaches this number, terminal will terminate
+termination = 20 # If counter reaches this number, terminal will terminate
 counter = 0 # Goes up +1 every time something is done
 
 # Valid levels:
@@ -18,17 +23,17 @@ counter = 0 # Goes up +1 every time something is done
 # Level-3 | Administrators only
 
 administrators = [
-    "AdminDucky",
-    "Mikey",
-    "Choppovm"
+    "adminducky",
+    "admin",
+    "mikey",
+    "choppovm"
 ]
 
 members = [
-    administrators,
-    "Meaxis",
-    "Janiqz",
-    "Patata",
-    "Meli"
+    "meaxis",
+    "janiqz",
+    "patata",
+    "meli"
 ]
 
 class entry:
@@ -43,17 +48,12 @@ class entry:
 
 entry1_content = """
 Hello there, wanderer. 
-This is a raw, archive created by a random person from germany, looking forward to learn coding in Python.
-This database is nothing special you see, it isn't even a database. I just made it to practice coding and learn Python more.
-As you might have guessed, this is programmed in Python. I have made some entries here for you to look around.
-Some are password locked (again, to allow me learning). To get the first password, visit my \"{L1}\":
-https://github.com/AdminDucky/Learning, or find out where I've hidden it within this text.
+This is a raw, archive created by a random person from germany, looking forward to learn coding in Python. This database is nothing special you see, it isn't even a database. I just made it to practice coding and learn Python more. As you might have guessed, this is programmed in Python. I have made some entries here for you to look around. Some are password locked (again, to allow me learning). To get the first password, visit my \"{L1}\": https://github.com/AdminDucky/Learning, or find out where I've hidden it within this text.
     
-    Please also leave feedback there, but please explain me how to improve/what the better solution be. Please also note that I am still a 
-    beginner in coding. 
-    You will get to see more passwords as you progress through this. A little minigame, per say?
+    Please also leave feedback there, but please explain me how to improve/what the better solution be. Please also note that I am still a beginner in coding. You will get to see more passwords as you progress through this. A little minigame, per say?
 
 Oh and, once you enter a password correctly, all entries on that level will be unlocked and accessible without password entry until you close it or reset it.
+
 Good luck,
 with kind regards,
 AdminDucky
@@ -85,12 +85,7 @@ def print_entry1(user, clearance):
 
 entry2_content = f"""
 Welcome back, wanderer.
-I see you have managed to get the password. Thank you for checking out my GitHub! You may ask yourself why I am doing this.
-Well, to be honest, I don't know either. I came back from school, and I felt like programming. Sadly, I am not on the level of understanding of how to code discord bots yet.
-In all essence though, I have discovered my love of coding a few weeks ago. In school, we did some experimenting on a beginner IDE where you could code with blocks.
-I really like it, and since Python was said to be beginner-friendly, I decided to start learning it.
-I know you might be bored of these, but since you also wish to continue, the second password is "{L2}".
-You can open files classified as Class-2 files with it. You'll have to search a little, or a lot, depending on where you look to find password-3.
+I see you have managed to get the password. Thank you for checking out my GitHub! You may ask yourself why I am doing this. Well, to be honest, I don't know either. I came back from school, and I felt like programming. Sadly, I am not on the level of understanding of how to code discord bots yet. In all essence though, I have discovered my love of coding a few weeks ago. In school, we did some experimenting on a beginner IDE where you could code with blocks. I really like it, and since Python was said to be beginner-friendly, I decided to start learning it. I know you might be bored of these, but since you also wish to continue, the second password is "{L2}". You can open files classified as Class-2 files with it. You'll have to search a little, or a lot, depending on where you look to find password-3.
 
 With regards,
 AdminDucky
@@ -100,7 +95,7 @@ entry2 = entry(2, "Secrets", "AdminDuckyie", 1, entry2_content) # Entry 2
 
 def print_entry2(user, clearance):
 
-    print(f"Loading Entry {entry2.id}, \"{entry2.title}\"")
+    print(f"Loading Entry {entry2.ID}, \"{entry2.title}\"")
     print(f"""
         
         Greetings, {user}, Level-{clearance}.
@@ -124,10 +119,7 @@ def print_entry2(user, clearance):
 entry3_content = """
 Congratulations on finding the second password, wanderer. 
 
-Over the course of days, I have asked some friends experienced in coding discord bots. Their recommendations had a wide range of what code or decorators to use.
-So for now, I have given up discord programming and am now focusing on the basic Python fundamentals. I am currently learning how to use variables and functions, as well as classes to some extent.
-This level0_unlock is actually written with classes, and I use a lot of variables. My parents like the idea of me learning to code, because of course, coding brings in money, and that's something they care about a lot.
-Which I can understand, since they just want to make sure I live a good life with enough money to provide for me and my future family.
+Over the course of days, I have asked some friends experienced in coding discord bots. Their recommendations had a wide range of what code or decorators to use. So for now, I have given up discord programming and am now focusing on the basic Python fundamentals. I am currently learning how to use variables and functions, as well as classes to some extent. This level0_unlock is actually written with classes, and I use a lot of variables. My parents like the idea of me learning to code, because of course, coding brings in money, and that's something they care about a lot. Which I can understand, since they just want to make sure I live a good life with enough money to provide for me and my future family.
 
 Thanks for reading,
 with regards,
@@ -162,13 +154,7 @@ def print_entry3(user, clearance):
 entry4_content = f"""
 Congratulations on finding the second password, wanderer. 
 
-Since I have started coding, I have watched a lot of tutorials, read a lot of tutorials and also did some stuff myself. I did some projects, and once of them was an old-failed version of the archive.
-The old archive, which I will refer to as "archive v1", is failed project of mine. I did it when I wasn't really familiar with the syntax.
-This is my second try on it, a redux, and I'll just hope it works, as a lot of effort went into this. Based on the assumption that you have read Entry 3, I wish to add something.
-In class, my teacher talked to me about what I wish to do after middle school. I said that I don't know, and he recommended me to go on a high school that has mechatronics as profile.
-That means building things, and then coding it. Now I can understand that you wish to proceed, which you can do with the phrase "{L3}", but please stay.
-I know reading stories might be boring, and you want to reach the glorious end already, but please do read my other stories.
-I have put a lot of effort into them.
+Since I have started coding, I have watched a lot of tutorials, read a lot of tutorials and also did some stuff myself. I did some projects, and once of them was an old-failed version of the archive. The old archive, which I will refer to as "archive v1", is failed project of mine. I did it when I wasn't really familiar with the syntax. This is my second try on it, a redux, and I'll just hope it works, as a lot of effort went into this. Based on the assumption that you have read Entry 3, I wish to add something. In class, my teacher talked to me about what I wish to do after middle school. I said that I don't know, and he recommended me to go on a high school that has mechatronics as profile. That means building things, and then coding it. Now I can understand that you wish to proceed, which you can do with the phrase "{L3}", but please stay. I know reading stories might be boring, and you want to reach the glorious end already, but please do read my other stories. I have put a lot of effort into them.
 
 With regards,
 AdminDucky
@@ -200,13 +186,9 @@ def print_entry4(user, clearance):
 entry5_content = """
 Hello again.
 
-Yes, this really is my third story on the second level, but don't worry, there really is nothing much on Level-3. I really do not have a lot to tell here.
-I have once remembered a video of some japansese girl singing morse code in a high voice, and I did some research.
-Countless hours of searching, I thought I'll never find it, but just as I was about to stop, I did. And turns out it's on spotify aswell.
-Here is it: https://open.spotify.com/track/390P65hsMn8Dt7HJcghT6J?si=05268bbde22d42e0
+Yes, this really is my third story on the second level, but don't worry, there really is nothing much on Level-3. I really do not have a lot to tell here. I have once remembered a video of some japansese girl singing morse code in a high voice, and I did some research. Countless hours of searching, I thought I'll never find it, but just as I was about to stop, I did. And turns out it's on spotify aswell. Here is it: https://open.spotify.com/track/390P65hsMn8Dt7HJcghT6J?si=05268bbde22d42e0
 
-Coding is hard, and I noticed that, but luckily I can type fast. When I asked my friend some questions about why certain pieces won't work, he did give me asnswers. Great friend, really.
-Some other people I've asked on the other hand just spammed be with "{L3}".
+Coding is hard, and I noticed that, but luckily I can type fast. When I asked my friend some questions about why certain pieces won't work, he did give me asnswers. Great friend, really. Some other people I've asked on the other hand just spammed be with "{L3}".
 
 Looking for the password for the third level? Well, sadly this entry does not contain it. Or does it?
 """
@@ -288,14 +270,18 @@ def welcome():
     user_input = input("")
     if user_input.lower() == "open":
         open()
+
     elif user_input.lower() == "close":
         close()
 
     elif user_input.lower() == "change":
         change()
 
-    elif user_input.lower() == "information":
+    elif user_input.lower() == "information" or "info":
         info()
+
+    elif user_input.lower() == "reset":
+        reset()
 
     else:
         print("Invalid keyword")
@@ -314,7 +300,9 @@ def change():
     changeinput = input("")
     if changeinput.lower() == "cancel":
         print("Successfully cancelled")
+
     elif changeinput == "1":
+
         def changeto_l1():
             print("Commencing changing level to Level-1. Please enter password below.\nIf password is wrong, procedure will be cancelled.")
             changeinput = input("")
@@ -329,8 +317,9 @@ def change():
         changeto_l1()
 
     elif changeinput == "2":
+
         def changeto_l2():
-            print("Commencing changing level to Level-3. Please enter password below.\nIf password is wrong, procedure will be cancelled.")
+            print("Commencing changing level to Level-2. Please enter password below.\nIf password is wrong, procedure will be cancelled.")
             changeinput = input("")
             if changeinput == L2:
                 print("Correct password, changing level")
@@ -343,6 +332,7 @@ def change():
         changeto_l2()
 
     elif changeinput == "3":
+
         def changeto_l3():
             print("Commencing changing level to Level-3. Please enter password below.\nIf password is wrong, procedure will be cancelled.")
             changeinput = input("")
@@ -372,10 +362,11 @@ def reset():
         print("Loading...")
         time.sleep(5)
         level = 0
+        isloggedin = False
     
     if changeinput == user:
         reset_procedure()
-        if level == 0:
+        if level == 0 and isloggedin == False:
             print(f"Procedure successful. You are now at Level-{level}.")
             print("Redirecting to menu")
         
@@ -471,7 +462,63 @@ def info():
     ----------------
     """)
 
+def login(mode):
+
+    print("Seems like you are on a list & require a login. Commencing login shortly...")
+
+    member_pass = "thisismemberpassword"
+    admin_pass = "administrators"
+    if mode == "member":
+        print("Setting up member login.")
+        print(f"Logging in as {user}.")
+        password_input = input("Enter password ")
+        
+        if password_input == member_pass:
+            isloggedin = True
+            print("Password correct. Logging in..")
+            time.sleep(1)
+            if isloggedin == False:
+                print("Something went wrong, terminating terminal.")
+                exit()
+            else:
+                print("Login successful, redirecting.")
+
+        else:
+            print("Wrong password. Terminating archive.")
+            time.sleep(1)
+            exit()
+
+    if mode == "admin":
+        print("Setting up administrator login.")
+        print(f"Logging in as {user}.")
+        password_input = input("Enter password ")
+        
+        if password_input == admin_pass:
+            isloggedin = True
+            print("Password correct. Logging in..")
+            time.sleep(1)
+            if isloggedin == False:
+                print("Something went wrong, terminating terminal.")
+                exit()
+            else:
+                print("Login successful, redirecting.")
+
+        else:
+            print("Wrong password. Terminating archive.")
+            time.sleep(1)
+            exit()
+
+if isloggedin == False:
+    if user in administrators:
+        login("admin")
+    if user in members:
+        login("member")
+
+
 while True:
     welcome()
+    counter += 1
     if counter == termination:
+        print("Archive rate limit reached, terminating")
+        time.sleep(3)
         break
