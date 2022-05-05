@@ -11,3 +11,6 @@ The Archive is something I tried on suggestion of another user, in that script t
 
 ## Information
 This is, as you might have already guessed, and open-source project. Since my code isn't special, and rather on a nooby level, I do not mind anyone using it and doing their own stuff with it (unless you have malicious intent)
+
+## Archive
+For more info, click [here](https://github.com/AdminDucky/Learning/tree/main/Archive%20Script)
