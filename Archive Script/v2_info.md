@@ -1,18 +1,6 @@
 # Archive v2
 > Remake of archive v1, with more features.
 
-## Changes
-`05/05/2022`
-- `Information` command
-- `Change` command
-- `Reset` command
-- Open command actually works now
-- Time delays for some stuff
-- Less complicated stuff
-- Entry IDs 
-- members & administrators list
-- archive actually works now
-
 ## ToDo
 - [x] `Open` command
 - [x] `Close` command
