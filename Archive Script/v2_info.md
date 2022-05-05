@@ -20,15 +20,16 @@
 - [x] `Change` command
 - [x] `Information` command
 - [x] Smooth entry listing for `Open` command 
-- [ ] Members login required
-- [ ] Administrators login required
+- [x] Members login required
+- [x] Administrators login required
 - [ ] Administrators permissions
 - [x] Action counter + termination int
 - [x] `break` function in loop using counter
-- [ ] Make action counter go up each time something is done
+- [x] Make action counter go up each time something is done
 
 ## Bugs
-- No known bugs! If you find some, please report them [here](https://github.com/AdminDucky/Learning/discussions/categories/bug-reports)
+- [ ] Fix changing level not working for some reason (please help me)
+- [ ] Fix {} content not displaying properly in entries
 
 ## Other
 Thanks for tracking my project, I am using this to learn python. Also, if you want the first password, and you haven't seen it in the code yet (or are too lazy to look for it) it's `GitHub`. 
