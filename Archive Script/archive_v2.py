@@ -1,8 +1,10 @@
 # https://github.com/AdminDucky/Learning
 import time
 
-global user
-user = input("Who are you? ")
+
+def declareuser():
+    global user
+    user = input("Who are you? ")
 global isloggedin
 isloggedin = False
 global level
@@ -46,7 +48,7 @@ class entry:
         self.content = content
 
 
-entry1_content = """
+entry1_content = f"""
 Hello there, wanderer. 
 This is a raw, archive created by a random person from germany, looking forward to learn coding in Python. This database is nothing special you see, it isn't even a database. I just made it to practice coding and learn Python more. As you might have guessed, this is programmed in Python. I have made some entries here for you to look around. Some are password locked (again, to allow me learning). To get the first password, visit my \"{L1}\": https://github.com/AdminDucky/Learning, or find out where I've hidden it within this text.
     
@@ -183,7 +185,7 @@ def print_entry4(user, clearance):
     """)
 
 
-entry5_content = """
+entry5_content = f"""
 Hello again.
 
 Yes, this really is my third story on the second level, but don't worry, there really is nothing much on Level-3. I really do not have a lot to tell here. I have once remembered a video of some japansese girl singing morse code in a high voice, and I did some research. Countless hours of searching, I thought I'll never find it, but just as I was about to stop, I did. And turns out it's on spotify aswell. Here is it: https://open.spotify.com/track/390P65hsMn8Dt7HJcghT6J?si=05268bbde22d42e0
@@ -287,6 +289,7 @@ def welcome():
         print("Invalid keyword")
 
 def change():
+    global level
     print(f"""
     This is the clearance change pannel. Your current level is '{level}'. To change, please select the number of one of the levels below:
 
@@ -302,8 +305,8 @@ def change():
         print("Successfully cancelled")
 
     elif changeinput == "1":
-
         def changeto_l1():
+            global level
             print("Commencing changing level to Level-1. Please enter password below.\nIf password is wrong, procedure will be cancelled.")
             changeinput = input("")
             if changeinput == L1:
@@ -317,8 +320,8 @@ def change():
         changeto_l1()
 
     elif changeinput == "2":
-
         def changeto_l2():
+            global level
             print("Commencing changing level to Level-2. Please enter password below.\nIf password is wrong, procedure will be cancelled.")
             changeinput = input("")
             if changeinput == L2:
@@ -332,8 +335,8 @@ def change():
         changeto_l2()
 
     elif changeinput == "3":
-
         def changeto_l3():
+            global level
             print("Commencing changing level to Level-3. Please enter password below.\nIf password is wrong, procedure will be cancelled.")
             changeinput = input("")
             if changeinput == L3:
@@ -347,11 +350,15 @@ def change():
         changeto_l3()
 
 def reset():
+    global level
+    global isloggedin
     print("You are about to reset the archive. Your clearance level will be wiped. Type your username (case insensitive) below to confirm reset.")
     changeinput = input("Enter your username to confirm reset. ")
     print("Reset confirmed. Resetting terminal.")
     
     def reset_procedure():
+        global level
+        global isloggedin
         print("Reset confirmed. Resetting terminal.")
         print("Loading")
         time.sleep(1)
@@ -363,6 +370,7 @@ def reset():
         time.sleep(5)
         level = 0
         isloggedin = False
+        declareuser()
     
     if changeinput == user:
         reset_procedure()
@@ -450,6 +458,7 @@ def open():
                 return
 
 def info():
+    global level
     print("Loading information")
     time.sleep(2)
     print(f"""
@@ -463,7 +472,7 @@ def info():
     """)
 
 def login(mode):
-
+    global isloggedin
     print("Seems like you are on a list & require a login. Commencing login shortly...")
 
     member_pass = "thisismemberpassword"
@@ -508,14 +517,14 @@ def login(mode):
             time.sleep(1)
             exit()
 
-if isloggedin == False:
-    if user in administrators:
-        login("admin")
-    if user in members:
-        login("member")
-
-
 while True:
+
+    if isloggedin  == False:
+        if user in members:
+            login("member")
+        if user in administrators:
+            login("admin")
+
     welcome()
     counter += 1
     if counter == termination:
