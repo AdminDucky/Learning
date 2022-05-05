@@ -28,8 +28,8 @@
 - [x] Make action counter go up each time something is done
 
 ## Bugs
-- [ ] Fix changing level not working for some reason (please help me)
-- [ ] Fix {} content not displaying properly in entries
+- [x] Fix changing level not working for some reason | Big props to [this](https://github.com/Meaxis) handsome man for helping out
+- [x] Fix {} content not displaying properly in entries
 
 ## Other
 Thanks for tracking my project, I am using this to learn python. Also, if you want the first password, and you haven't seen it in the code yet (or are too lazy to look for it) it's `GitHub`. 
