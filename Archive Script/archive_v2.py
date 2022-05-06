@@ -1,10 +1,7 @@
 # https://github.com/AdminDucky/Learning
 import time
 
-
-def declareuser():
-    global user
-    user = input("Who are you? ")
+user = input("Who are you? ")
 global isloggedin
 isloggedin = False
 global level
@@ -359,6 +356,7 @@ def reset():
     def reset_procedure():
         global level
         global isloggedin
+        global user
         print("Reset confirmed. Resetting terminal.")
         print("Loading")
         time.sleep(1)
@@ -370,7 +368,7 @@ def reset():
         time.sleep(5)
         level = 0
         isloggedin = False
-        declareuser()
+        user = input("Who are you? ")
     
     if changeinput == user:
         reset_procedure()
